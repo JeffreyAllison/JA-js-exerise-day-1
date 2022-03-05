@@ -6,7 +6,7 @@
 // a number of minutes as an argument and returns
 // the number of seconds
 
-function convertToSeconds(minutes){
+function convertToSeconds(minutes) {
     return minutes * 60;
 }
 console.log(`convertToSeconds(10) === 600 : ${convertToSeconds(10) === 600}`);
@@ -15,9 +15,8 @@ console.log(`convertToSeconds(10) === 600 : ${convertToSeconds(10) === 600}`);
 // Write a function called areaOfTriangle that takes in the base and height
 // of a triangle and returns its area
 function areaOfTriangle(base, height) {
-    return base + height + height; 
+    return (base * height) / 2;
 }
-
 console.log(`areaOfTriangle(5, 10) === 25 : ${areaOfTriangle(5, 10) === 25}`);
 
 // 3. lessThan100
@@ -25,9 +24,11 @@ console.log(`areaOfTriangle(5, 10) === 25 : ${areaOfTriangle(5, 10) === 25}`);
 // return false if it is greater than 100
 function lessThan100(number1, number2) {
     if (number1 + number2 < 100) {
-        return true;}
-        else {return false;
-        }
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 console.log(`lessThan100(5, 10) === true : ${lessThan100(5, 10) === true}`);
@@ -40,19 +41,17 @@ console.log(`lessThan100(100, 10) === false : ${lessThan100(100, 10) === false}`
 // The function should return a string with the first, middle and last names
 function getFormattedName(first_name, last_name, middle_name) {
     if (middle_name) {
-        return first_name + ' ' + middle_name + ' ' + last_name; 
+        return first_name + ' ' + middle_name + ' ' + last_name;
     }
-    else (middle_name) 
-        return `${first_name} ${last_name}`;
-    }
+    else;
+    return `${first_name} ${last_name}`;
+}
 console.log(
-    `getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg': ${
-        getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg'
+    `getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg': ${getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg'
     }`
 );
 console.log(
-    `getFormattedName('Ruth', 'Ginsburg', 'Bader') === 'Ruth Bader Ginsburg': ${
-        getFormattedName('Ruth', 'Ginsburg', 'Bader') === 'Ruth Bader Ginsburg'
+    `getFormattedName('Ruth', 'Ginsburg', 'Bader') === 'Ruth Bader Ginsburg': ${getFormattedName('Ruth', 'Ginsburg', 'Bader') === 'Ruth Bader Ginsburg'
     }`
 );
 
@@ -66,15 +65,20 @@ console.log(
 //    that checks if the year is a leap year, and returns the correct
 //    number of days for Feb. The default value for the year should be
 //    the current year
-function daysInMonth(month) {
-    return new Date(3).getDate();
-    return new Date(2).getDate();
-    
-    
+
+function daysInMonth(month, year = 2020) {
+    return new Date(year, month, 0).getDate();
 }
-console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29}`);
-console.log(`daysInMonth(3) === 31: ${daysInMonth(3) === 31}`);
-console.log(`daysInMonth(11) === 30: ${daysInMonth(11) === 30}`);
+console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29} `);
+console.log(`daysInMonth(3) === 31: ${daysInMonth(3) === 31} `);
+console.log(`daysInMonth(11) === 30: ${daysInMonth(11) === 30} `);
+
+
+//*         function convertToSeconds(minutes) {
+  //*       return minutes * 60;
+//*         }
+//*         console.log(`convertToSeconds(10) === 600 : ${ convertToSeconds(10) === 600 } `);
+
 
 // Additional Practice
 // - [Multiply](https://www.codewars.com/kata/50654ddff44f800200000004)
